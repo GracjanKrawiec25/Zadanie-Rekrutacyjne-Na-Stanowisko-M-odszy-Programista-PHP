@@ -1,0 +1,363 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+
+body{
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Kanit', sans-serif;
+}
+
+.row{
+      width: 100%;
+      margin: 0 !important;
+}
+
+p{
+      color: #303030;
+
+}
+
+.error {
+    text-align: left;
+    width: 100%;
+    color: #f50000;
+    font-size: 10px;
+    margin: 0;
+}
+
+
+.popUp{
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    z-index: 3;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.close_pop{
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute;
+  z-index: -1;
+}
+
+.close_but{
+  cursor: pointer;
+  color: #fff;
+  transition-duration: 0.2s;
+}
+
+.close_but:hover{
+    color: #cfcfcf;
+}
+
+.title_box {
+    font-size: 15px;
+    text-decoration-color: #5c5c5c;
+    font-weight: 600;
+}
+
+.box{
+  font-size: 14px;
+  height: 0;
+  padding: 0 30px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition-duration: 0.2s;
+}
+.box p{
+  font-family: 'Kanit', sans-serif;
+  margin: 5px 0;
+}
+
+.popUp .changes {
+    height: 0;
+    padding: 0px 30px ;
+    visibility: hidden;
+    margin: 0;
+    position: relative;
+  font-size: 14px;
+  border-bottom: 1px solid #f4f4f4;
+  transition-duration: 0.2s;
+}
+
+.pole0 {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.popUp .tabs {
+  opacity: 0;
+  height: 0;
+}
+
+.popUp .open_tab{
+  opacity: 1 !important;
+  height: fit-content;
+}
+
+.popUp .open_tab .box{
+    padding: 20px 30px;
+    height: fit-content;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+}
+
+.popUp .open_tab .changes{
+  height: fit-content;
+  padding: 20px 30px !important;
+  visibility: visible;
+}
+
+.open_but{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+
+
+.open_but img{
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+  transform: rotate(180deg);
+  transition-duration: 0.2s;
+}
+
+.active img{
+  transform: rotate(90deg);
+}
+
+
+.title {
+  background: #0884d6;
+  color: #fff;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+.slider_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.info{
+  width: 80%;
+  position: absolute;
+  left: 5%;
+  opacity: 1;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.info h1{
+  text-transform: uppercase;
+  color: #0099ff;
+}
+
+.info ul li b{
+  color: #09f;
+}
+.info ul li::marker{
+  color: #09f;
+}
+
+.form_box {
+  border-radius: 15% 10% 10% 15% / 50% 0% 0% 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 100vh;
+      z-index: 2;
+      margin-right: 0;
+      margin-left: auto;
+      width: 35%;
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+background: rgb(72,181,255);
+background: linear-gradient(90deg, rgba(72,181,255,1) 0%, rgba(6,131,213,1) 100%);
+}
+
+.krs_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: fit-content;
+  padding: 30px;
+  gap: 10px;
+
+}
+
+.krs_form input{
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent !important;
+  border: 1px solid #fff ;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.krs_form input:focus-visible {
+  border: 1px solid #fff ;
+  border-radius: 10px;
+    outline: 0;
+}
+
+input[type="text" i] {
+    padding: 0 0 !important;
+}
+
+.title_form{
+  width: 80%;
+  text-align: center;
+  color: #fff;
+}
+
+.krs_form select{
+    text-align: center;
+    background: transparent !important;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #fff ;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.krs_form select option{
+  color: #303030;
+cursor: pointer;
+}
+
+.krs_form select:focus-visible {
+  border: 1px solid #fff ;
+  border-radius: 10px;
+    outline: 0;
+}
+
+.krs_form label{
+  margin-bottom: 0px !important;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+  color: #303030;
+}
+
+
+
+
+.button {
+  padding: 5px 30px !important;
+  height: fit-content !important;
+  width: fit-content !important;
+  border: 2px solid #fff !important;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  margin-top: 20px;
+  transition-duration: 0.4s;
+}
+
+.button:hover{
+  transition-duration: 0.4s;
+  background: #1f68d6 !important;
+}
+
+
+/* MOBILNA WERSJA STRONY */
+
+
+@media only screen and (max-width: 850px){
+  .form_box{
+    width: 90% !important;
+    border-radius: 15px !important;
+    height: fit-content !important;
+    padding: 80px 100px !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-49%);
+  }
+
+  .slider_img{
+    height: 100vh;
+    position: relative;
+  }
+
+  .box p{
+    line-height: 17px;
+  }
+
+  .text {
+    line-height: 15px;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .form_box{
+    padding: 50px 10px !important;
+  }
+  .title_form {
+    width: 100%;
+  }
+  .krs_form{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .krs_form{
+    padding: 30px 10px;
+  }
+}
